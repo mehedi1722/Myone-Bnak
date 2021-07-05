@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management</title>
+    <!-- Bootstrap Link  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom css link  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="mt-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="Login_Area" id="Login_Area">
+                        <div class="Welcome_heading">
+                            <h1 class="text-center">Welcome to Myone Bank</h1>
+                        </div>
+                        <div class="Log_inform">
+                            <form>
+                                <label for="email">Email</label>
+                                <input class="form-control mb-3" id="email" type="email" placeholder="Enter your Email">
+                                <label for="password">Password</label>
+                                <input class="form-control" type="password" id="password" placeholder="Enter your password">
+                                <input class="btn btn-success mt-3 px-3" id="log_in_btn" type="submit" value="Login">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="TransectionForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="User_Account">
+                        <div class="Welcome_heading">
+                            <h1 class="text-center">Welcome to your Account</h1>
+                        </div>
+                        <div class="Account-Details">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="Deposite status">
+                                        <h4>Deposite</h4>
+                                        <h1>$<span id="dipositeAmount">10</span></h1>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="Withdaw status">
+                                        <h4>Withdraw</h4>
+                                        <h1>$<span id="WithdrawAmount">00</span></h1>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="Total status">
+                                        <h4>Total</h4>
+                                        <h1>$<span id="TotalAmount">00</span></h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-lg-6 col-lg-6 col-sm-12">
+                                    <div class="transection">
+                                        <h1>Deposite</h1>
+                                        <input id="deposite_input" class="form-control" placeholder="$ Amount you want to deposite" type="text">
+                                        <button id="depositeBtn" class="btn btn-success">Deposite</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-lg-6 col-sm-12">
+                                    <div class="transection">
+                                        <h1>Withdraw</h1>
+                                        <input id="withdraw_input" class="form-control" placeholder="$ Amount you want to withdraw" type="text">
+                                        <button id="withdrawBtn" class="btn btn-success">Withdraw</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Js File link  -->
+    <script src="./app.js"></script>
+</body>
+</html>
