@@ -18,22 +18,42 @@ LogIn.addEventListener('click', function(e){
     }
 })
 
+
+// Deposite Button Handler 
 const depositeBtn = document.getElementById("depositeBtn");
-const withdrawBtn = document.getElementById("withdrawBtn");
 
 depositeBtn.addEventListener('click', function(){
-    const depositeInput = document.getElementById('deposite_input').value;
-    const AmountOfDeposite = parseFloat(depositeInput);
-    const CurrentDeposite = document.getElementById('dipositeAmount').innerText;
-    const AmountOfCurrentDeposite = parseFloat(CurrentDeposite);
-    const totalDeposite = AmountOfCurrentDeposite + AmountOfDeposite
-    
-    document.getElementById('dipositeAmount').innerHTML = totalDeposite;
+    const AmountOfDeposite = GetInputNumber('deposite_input')
+
+    UpdateSpantext("dipositeAmount", AmountOfDeposite)
+    UpdateSpantext("TotalAmount", AmountOfDeposite)
+
     document.getElementById('deposite_input').value = "";
 
 })
+// WithDraw button handler 
+const withdrawBtn = document.getElementById("withdrawBtn");
 
 withdrawBtn.addEventListener('click', function(){
+    const AmountOfWithdraw = GetInputNumber("withdraw_input")
+    UpdateSpantext('WithdrawAmount', AmountOfWithdraw);
 
+    
 })
+
+// Common funtion for deposite and withdraw 
+function UpdateSpantext(id, Amount) {
+    const CurrentAmount = document.getElementById(id).innerText;
+    const CurrentBalance = parseFloat(CurrentAmount);
+    const TotalBalance = Amount + CurrentBalance;
+    document.getElementById(id).innerHTML = TotalBalance;
+}
+
+function GetInputNumber(id) {
+    const Input = document.getElementById(id).value;
+    const number = parseFloat(Input);
+
+    return number;
+}
+
 
