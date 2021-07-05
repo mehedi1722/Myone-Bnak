@@ -31,14 +31,14 @@ depositeBtn.addEventListener('click', function(){
     document.getElementById('deposite_input').value = "";
 
 })
+
 // WithDraw button handler 
 const withdrawBtn = document.getElementById("withdrawBtn");
 
 withdrawBtn.addEventListener('click', function(){
     const AmountOfWithdraw = GetInputNumber("withdraw_input")
-    UpdateSpantext('WithdrawAmount', AmountOfWithdraw);
-
-    
+    UpdateSpantext('WithdrawAmount', AmountOfWithdraw)
+    UpdateSpantext('TotalAmount', -1 * AmountOfWithdraw)
 })
 
 // Common funtion for deposite and withdraw 
@@ -52,7 +52,6 @@ function UpdateSpantext(id, Amount) {
 function GetInputNumber(id) {
     const Input = document.getElementById(id).value;
     const number = parseFloat(Input);
-
     return number;
 }
 
